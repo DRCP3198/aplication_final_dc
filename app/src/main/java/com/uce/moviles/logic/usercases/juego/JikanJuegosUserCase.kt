@@ -1,11 +1,8 @@
 package com.uce.moviles.logic.usercases.jikan
 
 import android.util.Log
-import com.uce.moviles.data.network.endpoints.anime.TopAnimesEndpoint
 import com.uce.moviles.data.network.endpoints.juego.JuegoEndpoint
 import com.uce.moviles.data.network.entities.jikan.juego.DataJuegos
-import com.uce.moviles.data.network.entities.jikan.top.TopAnime
-import com.uce.moviles.data.network.repository.RetrofitBase
 import com.uce.moviles.data.network.repository.RetrofitBaseJuego
 import com.uce.moviles.ui.core.Constants
 
