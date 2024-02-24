@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_color"
-    tools:context=".ui.activities.LoginActivity">
+    tools:context=".ui.activities.RegistroActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -119,10 +119,11 @@
             <!--                android:textStyle="bold" />-->
             <ImageButton
                 android:id="@+id/btnRetorno"
-                android:layout_width="379dp"
+                android:layout_width="103dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+
                 android:src="@drawable/home" />
 
 

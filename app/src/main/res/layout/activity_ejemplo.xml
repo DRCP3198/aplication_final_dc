@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_color"
     tools:context=".ui.activities.EjemploActivity">
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvJuego"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/main_color"/>
 
 
 

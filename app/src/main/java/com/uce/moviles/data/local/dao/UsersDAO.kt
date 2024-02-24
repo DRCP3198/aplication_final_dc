@@ -10,16 +10,22 @@ import com.uce.moviles.data.local.entities.Users
 @Dao
 interface UsersDAO {
 
-    @Query("select * from Users")
-    fun getAllUsers(): List<Users>
+    @Query("Select * from Users ")
+    fun getAllUsers():List<Users>
 
-    @Query("select * from Users where userId = :userId")
-    fun getOneUser(userId: Int): Users
+
+    @Query("Select * from Users where id = :id")
+    fun getSingleUser(id: Int):Users
 
     @Insert
-    fun insertUser(users: List<Users>)
+    fun insertUser(usersList:List<Users>)
 
+    @Insert
+    fun insertSingleUser(user:Users)
     @Update
-    fun updateUsers(users: List<Users>)
+    fun updateUse(usersList:List<Users>)
+
+    @Delete
+    fun deleteUser(user:Users)
 
 }

@@ -21,8 +21,8 @@ class UsersAdapter(private val listUsers: List<Users>) : RecyclerView.Adapter<Us
                 crossfade(true)
             }
 
-            binding.txtID.text = item.userId.toString()
-            binding.txtName.text = item.firstName.toString() + " " + item.lastName.toString()
+            binding.txtID.text = item.id.toString()
+            binding.txtName.text = item.nombre.toString() + " " + item.password.toString()
         }
     }
 

@@ -9,17 +9,18 @@ import com.uce.moviles.data.local.entities.Users
 
 @Database(
     entities = [Users::class],
-    version = 1
+    version = 4
 )
-abstract class DBRepository : RoomDatabase() {
-    abstract fun getUsersDAO(): UsersDAO
+
+abstract class DBRepository: RoomDatabase() {
+
+    abstract fun getUserDAO(): UsersDAO;
+
 }
 
-class DBConnection() {
+class DBConnection(){
+
     fun getConnection(context: Context): DBRepository =
-        Room.databaseBuilder(
-            context,
-            DBRepository::class.java,
-            "DBTest"
-        ).build()
+        Room.databaseBuilder(context, DBRepository::class.java, "DBText").build()
+
 }

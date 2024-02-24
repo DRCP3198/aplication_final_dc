@@ -2,14 +2,11 @@ package com.uce.moviles.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.uce.moviles.R
 import com.uce.moviles.databinding.ActivityEjemploBinding
-import com.uce.moviles.databinding.ActivityPrincipalBinding
 import com.uce.moviles.logic.usercases.jikan.JikanJuegosUserCase
-import com.uce.moviles.ui.adapters.AnimeAdapter
+import com.uce.moviles.ui.adapters.JuegoAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -31,7 +28,7 @@ class EjemploActivity : AppCompatActivity() {
             val animes = withContext(Dispatchers.IO) { jikan.getResponse() }
 
             animes.onSuccess { animes ->
-                val adapter = AnimeAdapter(animes)
+                val adapter = JuegoAdapter(animes)
                 binding.rvJuego.adapter = adapter
                 binding.rvJuego.layoutManager =
                     LinearLayoutManager(

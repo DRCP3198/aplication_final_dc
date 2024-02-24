@@ -5,43 +5,14 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Users(
-    val username: String? = null,
-    val password: String? = null
+    var nombre: String? = "no registrado",
+    var email: String? = null,
+    var password: String? = null,
+    var edad : Int? = 0
+
 ) {
     @PrimaryKey(autoGenerate = true)
-    var userId: Int = -1
-    var firstName: String = "No registrado"
-    var lastName: String = "No registrado"
-    var profile: String = ""
-
-    constructor(username: String?, password: String?, userId: Int)
-            : this(username, password) {
-        this.userId = userId
-    }
-
-    constructor(
-        id: Int, username: String?,
-        password: String?, profile: String
-    ) : this(
-        username,
-        password
-    ) {
-        this.profile = profile
-    }
-
-    constructor(
-        username: String?,
-        password: String?, userId: Int,
-        firstName: String, lastName: String
-    ) : this(
-        username,
-        password
-    ) {
-        this.userId = userId
-        this.firstName = firstName
-        this.lastName = lastName
-    }
+    var id: Int = 0  // Room will manage this field
 }
-
 
 

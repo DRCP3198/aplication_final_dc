@@ -23,7 +23,7 @@ class My_Application : Application() {
     companion object {
         private lateinit var con: DBRepository
 
-        fun getConnectionDB(): DBRepository? {
+        fun getConnectionDB(): DBRepository {
             return con
         }
     }

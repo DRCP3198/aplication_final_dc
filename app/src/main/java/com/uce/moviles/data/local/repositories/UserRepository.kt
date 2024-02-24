@@ -7,12 +7,10 @@ class UserRepository {
     fun getUserList(): List<Users> {
         return listOf<Users>(
             Users(
-                "bayron", "bayron", 1,
-                "Bayron", "Torres"
+                "dil", "dil", "123",
+                15
             ),
-            Users("juan", "juan", 2),
-            Users("marco", "marco", 3),
-            Users("maria", "maria", 4)
+
         )
     }
 }
